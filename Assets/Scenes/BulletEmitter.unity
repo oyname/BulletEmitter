@@ -398,7 +398,25 @@ MonoBehaviour:
   initialSpeed: 25
   SpeedCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -413,14 +431,51 @@ MonoBehaviour:
   ActivateScalerCurve: 0
   ScalerCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 1.5095726
+      outSlope: 1.5095726
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.26210362
+      value: 1.3956645
+      inSlope: 0.079342306
+      outSlope: 0.079342306
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.76994234
+      value: 0.7096312
+      inSlope: -0.016501963
+      outSlope: -0.016501963
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9920349
+      value: 1
+      inSlope: 1.3074224
+      outSlope: 1.3074224
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
     m_PreInfinity: 2
-    m_PostInfinity: 2
+    m_PostInfinity: 1
     m_RotationOrder: 4
   bulletAlign: 0
   timeToAligment: 0
   duration: 0
   roationaDuration: 0
+  bulletColor: {r: 0.9716981, g: 0.40405896, b: 0.09625311, a: 0}
 --- !u!4 &1311130025
 Transform:
   m_ObjectHideFlags: 0

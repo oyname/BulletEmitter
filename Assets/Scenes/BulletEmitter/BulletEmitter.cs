@@ -7,67 +7,95 @@ using UnityEngine;
 public class BulletEmitter : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("The number of bullets to be generated in one emission.")]
     private int bulletsAmount = 10;
     [SerializeField]
+    [Tooltip("The number of bullets to be generated per group.")]
     private int NumberPerGroup = 1;
     [SerializeField]
+    [Tooltip("The angle at which bullets should be distributed within a group.")]
     private float GroupAngle = 0;
     [SerializeField]
+    [Tooltip("The rate at which bullets should be emitted.")]
     private float repeatRate = 0.2f;
     [SerializeField]
+    [Tooltip("The number of repetitions of the emission.")]
     private int NumberOfRepetitions = 1;
     private int RepetitionsCnt = 0;
     [SerializeField]
+    [Tooltip("The delay between repetitions.")]
     private float RepetitionsDelay = 0f;
     private float RepetitionsTimer = 0f;
     [SerializeField]
+    [Tooltip("The start-distance each bullet from center")]
     float moveDistance = 0f;
     [SerializeField]
     [Range(0f, 360f)]
+    [Tooltip("The start and end angles of the emission pattern.")]
     private float startAngle = 90f, endAngle = 180f;
     [SerializeField]
+    [Tooltip("Indicates whether bullets should be emitted in a scatter.")]
     private bool scatter = false;
     [SerializeField]
+    [Tooltip("The target object to which bullets should be aligned.")]
     private GameObject target;
     [SerializeField]
+    [Tooltip("Indicates whether bullets should be aligned towards the target object.")]
     private bool toTarget = false;
     [SerializeField]
+    [Tooltip("Indicates whether oscillation of the emission should occur.")]
     private bool oscillate = false;
     [SerializeField]
+    [Tooltip("The frequency of oscillation.")]
     private float frequency = 2f;
     [SerializeField]
+    [Tooltip("The angle by which oscillation should occur.")]
     private float oscillateAngle = 0f;
     [SerializeField]
+    [Tooltip("The opening angle of oscillation.")]
     private float oscillateOpeningAngle = 0f;
     [SerializeField]
+    [Tooltip("Indicates whether the emission should be infinite.")]
     private bool infinite = true;
     [SerializeField]
+    [Tooltip("The rotation speed of bullets.")]
     private float rotateSpeed = 0f;
     [SerializeField]
-    private float initialSpeed = 10f;
+    [Tooltip("The initial speed of bullets.")]
+    private float initialSpeed = 5f;
     [SerializeField]
+    [Tooltip("The speed curve of bullets.")]
     private AnimationCurve SpeedCurve;
     [SerializeField]
+    [Tooltip("The rotation speed of bullets.")]
     private float BulletRotationSpeed;
     [SerializeField]
+    [Tooltip("The rotation speed curve of bullets.")]
     private AnimationCurve BulletRotationSpeedCurve;
     [SerializeField]
+    [Tooltip("The scaling of bullets.")]
     private Vector3 scaleBullet = new Vector3(1f, 1f, 1f);
     [SerializeField]
+    [Tooltip("Indicates whether the scaling curve should be activated.")]
     private bool ActivateScalerCurve = false;
     [SerializeField]
+    [Tooltip("The scaling curve of bullets.")]
     private AnimationCurve ScalerCurve;
     [SerializeField]
+    [Tooltip("Indicates whether bullets should be aligned.")]
     private bool bulletAlign = false;
     [SerializeField]
+    [Tooltip("The time required for alignment.")]
     private float timeToAligment = 0f;
     [SerializeField]
+    [Tooltip("The duration of the emission.")]
     private float duration = 0f;
     [SerializeField]
+    [Tooltip("The duration of rotation.")]
     private float roationaDuration = 0f;
-    [Tooltip("Color of BUllet")]
+    [Tooltip("The color of bullets.")]
     public Color bulletColor;
-
+    [Tooltip("A reference to the oscillation object.")]
     private Oscillation oscillator;
 
     // Activates the emitter
